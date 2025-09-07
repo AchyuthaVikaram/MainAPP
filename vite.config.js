@@ -17,7 +17,7 @@ export default defineConfig({
         // VITE_MUSIC_LIBRARY_REMOTE example: https://music-lib.example.com/assets/remoteEntry.js
         // VITE_MUSIC_LIBRARY_URL example: https://music-lib.example.com
         'music-library': (() => {
-          const remoteUrl = process.env.VITE_MUSIC_LIBRARY_URL || 'http://localhost:5174';
+          const remoteUrl = process.env.VITE_MUSIC_LIBRARY_URL || 'https://music-library-roan.vercel.app/';
           const absoluteUrl = remoteUrl.startsWith('http') ? remoteUrl : `https://${remoteUrl}`;
           return `${absoluteUrl.replace(/\/$/, '')}/assets/remoteEntry.js`;
         })()
@@ -39,3 +39,4 @@ export default defineConfig({
     cssCodeSplit: false
   }
 })
+
